@@ -1,0 +1,16 @@
+{
+  "name": "renzhifan/arr",
+  "description": "常用的php数组方法",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "renzhifan",
+      "email": "zhifan6797@163.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Renzhifan\\Arr\\": "src"
+    }
+  }
+}
