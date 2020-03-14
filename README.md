@@ -19,3 +19,9 @@ $arr = [
     ];
  $sortArr=\Renzhifan\Arr\Arr::arraySort($arr, 'a', 'asc');
 ```
+
+### 生成一段时间的默认数据
+
+```php
+$timeRange=\Renzhifan\Arr\Arr::getTimeRange(20200121, 20200321, 'Y-m-d');
+```
