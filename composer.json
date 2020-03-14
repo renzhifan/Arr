@@ -8,7 +8,7 @@
       "email": "zhifan6797@163.com"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "version": "1.0.0",
   "autoload": {
     "psr-4": {
