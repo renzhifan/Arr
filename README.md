@@ -25,3 +25,23 @@ $arr = [
 ```php
 $timeRange=\Renzhifan\Arr\Arr::getTimeRange(20200121, 20200321, 'Y-m-d');
 ```
+
+### 生成指定长度的随机字符串
+
+```php
+$randStr=\Renzhifan\Arr\Arr::getRandStr(9);
+```
+
+### 使用 mb\_\*系列函数实现反转中文字符串：
+
+```php
+$reverseStr=\Renzhifan\Arr\Arr::reverseStr("你好啊");
+```
+
+### 求一个数组中出现最多的值
+
+```php
+$array = array(1, 1, 1, 54, 3, 4, 3, 4, 3, 14, 3, 4, 3, 7, 8, 9, 12, 45, 66, 5, 7, 8, 9, 2, 45, 3);
+list($key, $count) = \Renzhifan\Arr\Arr::getMaxCountValue($array);
+echo "数组中数字{$key}重复次数最多，为:{$count}次";
+```

@@ -47,4 +47,48 @@ class Arr
         }
         return $timeRange;
     }
+
+    /**
+     * 生成指定长度的随机字符串
+     * @param [type] $length
+     */
+    public static function getRandStr($length)
+    {
+        $str = '';
+        $strPool = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz';
+        $max = strlen($strPool) - 1;
+
+        for ($i = 0; $i < $length; $i++) {
+            $str .= $strPool[mt_rand(0, $max)];
+        }
+
+        return $str;
+    }
+
+    /**
+     * PHP 使用mb_*系列函数实现反转中文字符串：
+     * @param [type] $str
+     */
+    public static function reverseStr($str)
+    {
+        $r = array();
+        for ($i = 0; $i < mb_strlen($str); $i++) {
+            $r[] = mb_substr($str, $i, 1, 'UTF-8');
+        }
+        return implode(array_reverse($r));
+    }
+
+    /**
+     *求一个数组中出现最多的值
+     * @param [type] $array
+     * @return void
+     */
+    public static function getMaxCountValue($arr)
+    {
+        $array2 = array_count_values($arr);   // 统计数组中所有值出现的次数
+        arsort($array2);                        // 按照键值对关联数组进行降序排序
+        $first = reset($array2);
+        $firstKey = key($array2);
+        return [$firstKey, $first];
+    }
 }
