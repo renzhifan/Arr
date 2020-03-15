@@ -45,3 +45,12 @@ $array = array(1, 1, 1, 54, 3, 4, 3, 4, 3, 14, 3, 4, 3, 7, 8, 9, 12, 45, 66, 5, 
 list($key, $count) = \Renzhifan\Arr\Arr::getMaxCountValue($array);
 echo "数组中数字{$key}重复次数最多，为:{$count}次";
 ```
+
+### 反转数组
+
+```php
+$arr = [11, 22, 33, 44, 55, 66, 77];
+
+// 输出：[77,66,55,44,33,22,11]
+echo json_encode(\Renzhifan\Arr\Arr::reverseArray($arr));
+```

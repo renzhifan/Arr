@@ -91,4 +91,24 @@ class Arr
         $firstKey = key($array2);
         return [$firstKey, $first];
     }
+
+    /**
+     * 反转数组
+     * @param [type] $arr
+     * @return void
+     */
+    public static function reverseArray($arr)
+    {
+        $n = count($arr);
+        $left = 0;
+        $right = $n - 1;
+
+        while ($left < $right) {
+            $temp = $arr[$left];
+            $arr[$left++] = $arr[$right];
+            $arr[$right--] = $temp;
+        }
+
+        return $arr;
+    }
 }
